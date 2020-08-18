@@ -53,11 +53,22 @@ namespace MyNewCalc
             decimal termen1 = numericUpDownTermen1.Value;
             decimal termen2 = numericUpDownTermen2.Value;
 
-            decimal rezultat = termen1 / termen2;
-            textBoxRezultat.Text = rezultat.ToString();
+            if (termen2 == 0)
+            {
 
-           
+                string message = "Do not divide by 0 :-) ";
+                string title = "Divide by 0";
+                MessageBox.Show(message, title);
+            }
+            else
 
+                 if (termen2 != 0)
+            {
+                decimal rezultat = termen1 / termen2;
+                textBoxRezultat.Text = rezultat.ToString();
+
+            }
+        }
         }
     }
-}
+
